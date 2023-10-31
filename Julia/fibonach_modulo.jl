@@ -7,7 +7,14 @@ function first_zero(p)
         push!(fibo,(fibo[end-1]+ fibo[end])%p)
       end
     end
-  return length(fibo)
+    nT = length(fibo)
+    if fibo[end-1] == 1
+      d = 1
+    elseif fibo[end-1]^2%p == 1
+      d = 2
+    else
+      d = 4
+    end
+  return [p,nT, d*nT, d]
 end
 
-first_zero(71)
