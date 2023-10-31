@@ -18,5 +18,4 @@ function myisprime(n)
   end
 end
 
-function myprime(n)
-  
+using Primes

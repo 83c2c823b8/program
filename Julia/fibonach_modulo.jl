@@ -1,4 +1,4 @@
-function first_zero(p)
+function my_fibonach_period(p)
   fibo=[1,1]
     while true
       if fibo[end] == 0
@@ -18,3 +18,7 @@ function first_zero(p)
   return [p,nT, d*nT, d]
 end
 
+# for i in 1:100
+#   println(my_fibonach_period(prime(n)))
+
+print([my_fibonach_period(prime(i)) for i in 1:30])
