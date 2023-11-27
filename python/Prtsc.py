@@ -4,11 +4,11 @@ from PIL import ImageGrab
 import pyautogui as pag
 import tkinter
 ut = time.time()
-new_dir_path = R"c:\Users\gf1cg\Pictures\scr"+ str(ut) 
+new_dir_path = "/home/gf1cg8to/Pictures/" + str(ut)
 os.mkdir(new_dir_path)
 time.sleep(5)
 for i in range(293):
-  scr = pag.screenshot()
-  scr.save(r"c:\Users\gf1cg\Pictures\scr"  + str(ut) + "\ " + str(i + 100) +".jpg")
+  scr = pag.screenshot(region=(0, 0, 3840, 2160))
+  scr.save(new_dir_path + "/" + str(i + 100) +".jpg")
   pag.press('right')
   time.sleep(1.5)
