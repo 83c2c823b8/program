@@ -1,3 +1,4 @@
+import os
 from PIL import Image
 from reportlab.pdfgen import canvas
 
@@ -13,10 +14,10 @@ def convert_jpg_to_pdf(input_files, output_pdf):
 
 if __name__ == "__main__":
     # 100.jpgから始まる連番のJPEGファイルを読み込む
-    input_files = ["{}.jpg".format(i) for i in range(100, 289)]
+    input_files = sorted([file for file in os.listdir() if file.lower().endswith('.jpg')])
 
     # 出力するPDFファイルの名前
-    output_pdf = "output"
+    output_pdf = input("出力するPDFファイルの名前を入力してください（拡張子なし）: ")
 
     # JPEGをPDFに変換
     convert_jpg_to_pdf(input_files, output_pdf)

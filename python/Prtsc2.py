@@ -3,8 +3,8 @@ import os
 #from PIL import ImageGrab
 import pyautogui as pag
 #import tkinter
-ut = time.time()
-new_dir_path = "/home/gf1cg8to/Pictures/" + str(ut)
+ut = str(time.time())[::-1]
+new_dir_path = "/home/gf1cg8to/Pictures/" + ut
 os.mkdir(new_dir_path)
 time.sleep(4)
 scr = pag.screenshot(region=(1160, 0, 1525, 2160))
