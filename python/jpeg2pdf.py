@@ -17,7 +17,7 @@ if __name__ == "__main__":
     input_files = sorted([file for file in os.listdir() if file.lower().endswith('.jpg')])
 
     # 出力するPDFファイルの名前
-    output_pdf = input("出力するPDFファイルの名前を入力してください（拡張子なし）: ")
+    output_pdf = input("PDFファイル名: ")
 
     # JPEGをPDFに変換
     convert_jpg_to_pdf(input_files, output_pdf)
