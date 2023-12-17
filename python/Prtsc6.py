@@ -32,3 +32,4 @@ for i in range(2000,3000,2):
   scr.save(new_dir_path + "/" + str(i+1) +".jpg")
   pag.press('right')
   time.sleep(1.5)
+
